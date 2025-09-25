@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosassauro: O Soberano dos Mares do Cretáceo</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define a fonte Inter como padrão e um fundo mais escuro */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* bg-slate-900 */
+        }
+        
+        /* Efeito de sobreposição para a imagem do cabeçalho */
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.8), rgba(0, 0, 0, 0.6));
+            z-index: 1;
+        }
+
+        /* Classes para animação de scroll */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo personalizado para a lista de anatomia */
+        .anatomy-list li::before {
+            content: '>';
+            color: #22d3ee; /* text-cyan-400 */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-300 antialiased">
+
+    <!-- Seção Principal (Hero) -->
+    <header class="relative bg-cover bg-center text-white text-center py-28 md:py-40 px-4 hero-overlay" style="background-image: url('https://i.redd.it/bfdptmvkxen81.jpg');">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider drop-shadow-lg">Mosassauro</h1>
+            <h2 class="text-xl md:text-3xl font-bold text-cyan-300 mt-2 drop-shadow-md">O Soberano dos Mares do Cretáceo</h2>
+            <p class="mt-6 text-base md:text-xl max-w-2xl mx-auto">Descubra a história real por trás do predador que dominou os oceanos há 70 milhões de anos.</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container mx-auto px-4 sm:px-6 py-16 md:py-20">
+        <div class="space-y-16 md:space-y-24">
+
+            <!-- Seção 1 – Origem e Descoberta -->
+            <section class="scroll-animate grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-5">Origem e Descoberta</h3>
+                    <p class="text-base md:text-lg leading-relaxed text-gray-400">
+                        O Mosassauro foi descoberto no século XVIII, em uma pedreira na Holanda. Sua identificação pelo naturalista Georges Cuvier foi fundamental para a ciência, pois ajudou a comprovar que espécies poderiam se extinguir — um conceito revolucionário para a época.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://external-preview.redd.it/in-the-late-18th-century-fossils-belonging-to-the-great-v0-xBGLf_31gOtzGgzTKkFbUV4WuETqM9AxiXOIM6298V4.jpeg?width=640&crop=smart&auto=webp&s=74f21e13c501bac551b5276bfd77e4a78df9b872" alt="[Imagem do crânio de Maastricht em um museu]" class="w-full h-auto rounded-lg object-cover shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/20">
+                </div>
+            </section>
+
+            <!-- Seção 2 – Quem Ele Era -->
+            <section class="scroll-animate grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+                <div>
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyR8suux-vyP3i34OsOjmYhPQq0KcGO92f8904ejXaoqReTfn-sdpZ30fAQamyKNe_Bx2lWIyODyRqYH22WIECPU54f_twHTpE4yhOgQq6nQzyA8h_RCDfOiAuB1HdaZtfQKlTVqEMHQuM/s1600/Mosasaurus.png" alt="[Imagem comparando o tamanho de um Mosassauro com um humano]" class="w-full h-auto rounded-lg object-cover shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/20">
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-5">Quem Ele Era</h3>
+                    <p class="text-base md:text-lg leading-relaxed text-gray-400">
+                        Apesar de muitas vezes confundido com um “dinossauro marinho”, o mosassauro era, na verdade, um lagarto gigante adaptado ao oceano. Pertencia à ordem Squamata, a mesma de lagartos e cobras atuais. Seu corpo hidrodinâmico, cauda em forma de barbatana e mandíbula flexível o tornaram um dos predadores mais letais já existentes.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Seção 3 – Anatomia de um Predador -->
+            <section class="scroll-animate bg-slate-900/50 p-6 sm:p-8 md:p-12 rounded-lg shadow-2xl ring-1 ring-slate-800">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+                    <div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">Anatomia de um Predador</h3>
+                        <ul class="space-y-4 text-base md:text-lg list-inside anatomy-list">
+                            <li><strong class="text-cyan-400 font-semibold">Tamanho:</strong> Até 13–17 metros.</li>
+                            <li><strong class="text-cyan-400 font-semibold">Peso:</strong> Até 15 toneladas.</li>
+                            <li><strong class="text-cyan-400 font-semibold">Dentição dupla:</strong> Fileira extra de dentes no céu da boca para segurar presas.</li>
+                            <li><strong class="text-cyan-400 font-semibold">Camuflagem:</strong> Dorso escuro e ventre claro, como tubarões e orcas.</li>
+                            <li><strong class="text-cyan-400 font-semibold">Locomoção:</strong> Cauda em forma de crescente para velocidade explosiva.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://www.shutterstock.com/image-vector/anatomy-mosasaurus-prehistoric-marine-reptile-600nw-2651697141.jpg" alt="[Imagem de um esquema anatômico simplificado do Mosassauro]" class="w-full h-auto rounded-lg object-cover shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/20">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 4 – Vida nos Oceanos -->
+            <section class="scroll-animate grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+                 <div class="order-2 md:order-1">
+                    <h3 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-5">Vida nos Oceanos</h3>
+                    <p class="text-base md:text-lg leading-relaxed text-gray-400">
+                        O mosassauro viveu entre 82 e 66 milhões de anos atrás, espalhado pelos oceanos do mundo todo. Sua dieta incluía peixes, tubarões, tartarugas, aves marinhas, plesiossauros e até outros mosassauros. Era um verdadeiro predador alfa.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://i.redd.it/s8wa9ykaza181.jpg" alt="[Imagem de paleoarte de um Mosassauro caçando amonites]" class="w-full h-auto rounded-lg object-cover shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/20">
+                </div>
+            </section>
+
+            <!-- Seção 5 – Extinção -->
+            <section class="scroll-animate grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+                <div>
+                    <img src="https://s2.glbimg.com/OCXbAfYHcnqOdMEzuC3ijVu2skM=/620x465/s2.glbimg.com/h6xvW7kCAl8ooqOrzJc82STyxUI=/620x465/s.glbimg.com/jo/g1/f/original/2016/04/06/meteoro1.jpg" alt="[Imagem artística do impacto do asteroide Chicxulub no oceano]" class="w-full h-auto rounded-lg object-cover shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/20">
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-5">Extinção</h3>
+                    <p class="text-base md:text-lg leading-relaxed text-gray-400">
+                        O impacto de um asteroide há 66 milhões de anos selou o destino do mosassauro. Com a queda na produção de fitoplâncton, toda a cadeia alimentar marinha entrou em colapso, levando à extinção desses gigantes.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Seção 6 – Ciência e Cultura Pop -->
+            <section class="scroll-animate text-center max-w-4xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-5">Ciência e Cultura Pop</h3>
+                <p class="text-base md:text-lg leading-relaxed text-gray-400 mb-8">
+                    Graças a filmes como Jurassic World, o mosassauro ganhou fama mundial. No entanto, o cinema o retratou com tamanho e habilidades exageradas. A ciência mostra uma criatura já impressionante por si só, sem precisar de superpoderes.
+                </p>
+                <img src="https://preview.redd.it/size-comparison-of-ark-jw-and-real-mosasaurus-v0-gmoljc1gijcf1.jpeg?width=1280&auto=webp&s=be37e19797c7730eaf9e0c490f6587b082c8ca50" alt="[Imagem de comparação lado a lado da versão científica do Mosassauro vs a versão de Jurassic World]" class="w-full h-auto rounded-lg object-cover shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/20">
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-900 border-t border-slate-800 text-center py-8 mt-16 md:mt-20">
+        <p class="text-gray-500">&copy; 2024 Exploração Paleontológica. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para animação de scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // A animação começa quando 10% do elemento está visível
+            });
+
+            const elements = document.querySelectorAll('.scroll-animate');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
